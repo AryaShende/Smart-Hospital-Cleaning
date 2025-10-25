@@ -1,0 +1,17 @@
+# Flask for the web server
+Flask==2.3.2
+flask-cors==4.0.1  # For allowing frontend to connect
+# Supabase for the database
+supabase==1.0.3
+# For loading .env files
+python-dotenv==1.0.0
+# For AI image analysis
+google-generativeai  # Use latest version
+Pillow                 # Use latest version
+requests==2.31.0
+# For PDF report generation
+reportlab==4.0.4
+# For password hashing
+bcrypt==4.0.1
+# For creating and verifying JSON Web Tokens
+PyJWT==2.8.0

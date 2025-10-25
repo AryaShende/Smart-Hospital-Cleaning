@@ -1,0 +1,52 @@
+<!-- This is just an HTML snippet. It gets loaded into index.html -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    
+    <!-- Left Column: Submit Work -->
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Submit Your Work</h2>
+        <form id="upload-form">
+            <!-- Room ID -->
+            <div class="mb-4">
+                <label for="room" class="block text-gray-700 text-sm font-medium mb-2">Room ID</label>
+                <input type="text" id="room" name="room" required
+                       class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                       placeholder="e.g., ICU-101">
+            </div>
+            <!-- Photo Upload -->
+            <div class="mb-6">
+                <label for="photo" class="block text-gray-700 text-sm font-medium mb-2">'After' Photo</label>
+                <input type="file" id="photo" name="photo" required accept="image/png, image/jpeg, image/webp"
+                       class="w-full text-sm text-gray-500
+                              file:mr-4 file:py-2 file:px-4
+                              file:rounded-lg file:border-0
+                              file:text-sm file:font-semibold
+                              file:bg-indigo-50 file:text-indigo-600
+                              hover:file:bg-indigo-100">
+                <p class="text-xs text-gray-500 mt-1">PNG, JPG, or WEBP. Max 10MB.</p>
+            </div>
+            <!-- Submit Button with Spinner -->
+            <button type="submit" id="upload-submit-button"
+                    class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition duration-300
+                           flex items-center justify-center disabled:bg-indigo-400">
+                
+                <!-- Spinner (hidden by default) -->
+                <svg id="upload-spinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <!-- Button Text -->
+                <span id="upload-button-text">Submit for Verification</span>
+            </button>
+        </form>
+    </div>
+
+    <!-- Right Column: Assigned Tasks -->
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Your Assigned Tasks</h2>
+        <!-- Task list will be loaded here by app.js -->
+        <div id="task-list" class="space-y-4">
+            <p>Loading tasks...</p>
+        </div>
+    </div>
+
+</div>

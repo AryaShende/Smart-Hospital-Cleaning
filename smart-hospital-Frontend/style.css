@@ -1,0 +1,7 @@
+/* We use Tailwind for most things, but this ensures a consistent font */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Add a fallback font in case Tailwind's Inter fails to load */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');

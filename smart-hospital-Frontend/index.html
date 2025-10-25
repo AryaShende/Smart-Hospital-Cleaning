@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Hospital Cleaning</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load custom styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Load the main application logic -->
+    <!-- 'defer' ensures it runs after the HTML is parsed -->
+    <script src="app.js" defer></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Header / Navigation Bar -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-indigo-600">Smart Hospital Cleaning</div>
+            <button id="logout-button" class="hidden bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">
+                Logout
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <!-- This div is where our JavaScript will inject the page content -->
+    <main id="main-content" class="container mx-auto p-6">
+        <!-- Content from login.html, register.html, etc. will be loaded here -->
+        <p class="text-center">Loading...</p>
+    </main>
+
+    <!-- Global Message Box (Toast) -->
+    <!-- This is hidden by default and shown by JavaScript for errors/success -->
+    <div id="message-box" class="hidden fixed top-5 right-5 p-4 rounded-lg shadow-lg text-white">
+        <!-- Message content goes here -->
+    </div>
+
+</body>
+</html>
