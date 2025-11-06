@@ -24,4 +24,5 @@ EXPOSE 5000
 
 # Define the command to run the application when the container starts.
 # This runs the Flask development server. For production, a Gunicorn server would be used.
-CMD ["gunicorn", "--workers", "4", "--bind", "0.0.0.0:$PORT", "main:app"]
+# FIXED
+CMD gunicorn --workers 4 --bind 0.0.0.0:$PORT main:app
