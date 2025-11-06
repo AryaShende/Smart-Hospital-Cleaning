@@ -7,7 +7,17 @@ import jwt
 from config import jwt_secret
 
 app = Flask(__name__)
-CORS(app)  # Initialize CORS to allow all origins
+
+# --- THIS IS THE CRITICAL CHANGE ---
+# We are telling the backend to allow requests from your frontend's URL
+origins = [
+    "https://smart-hospital-frontend.onrender.com", # Your live frontend
+    "http://localhost:8080", # For local testing
+    "http://127.0.0.1:5500"  # For local testing
+]
+CORS(app, origins=origins)
+# --- END OF CHANGE ---
+
 
 # --- Auth Routes ---
 
