@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const logoutButton = document.getElementById("logout-button");
     const messageBox = document.getElementById("message-box");
 
-    const API_BASE_URL = "http://127.0.0.1:5000";
+    const API_BASE_URL = "https://smart-hospital-backend-ii6x.onrender.com";
 
     const showMessage = (message, isError = false) => {
         const icon = isError ? '<i class="fas fa-exclamation-circle"></i>' : '<i class="fas fa-check-circle"></i>';
